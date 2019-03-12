@@ -11,9 +11,9 @@ namespace loops3
         static void Main(string[] args)
         {
             int[] numbers = new int[20];
+            Console.WriteLine("Enter a twenty numbers");
             for (int i = 0; i < 20; i++)
             {
-                Console.WriteLine("Enter a twenty numbers");
                 string answer = Console.ReadLine();
                 numbers[i] = int.Parse(answer);
             }

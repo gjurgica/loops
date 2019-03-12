@@ -12,9 +12,9 @@ namespace loops
         {
             int[] numbers = new int[5];
             int result = 0;
-            for(int i = 0; i < 5; i++)
+            Console.WriteLine("Enter a five numbers");
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine("Enter a five numbers");
                 string answer = Console.ReadLine();
                 numbers[i] = int.Parse(answer);
             }
