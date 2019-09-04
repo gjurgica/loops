@@ -10,36 +10,22 @@ namespace loops2
     {
         static void Main(string[] args)
         {
-            string[] names = new string[] { "Gjurgica", "Nikola" };
-            Console.WriteLine("Enter your name");
-            Array.Resize(ref names, names.Length+1);
-            names[names.Length-1] = Console.ReadLine();
-            foreach(string name in names)
+            string[] names = new string[] { "Jimy","Monica"};
+            string answer = "";
+            do
+            {
+                Console.WriteLine("Enter a name");
+                Array.Resize(ref names, names.Length + 1);
+                names[names.Length-1] = Console.ReadLine();
+                Console.WriteLine("Do you want enter another name? Y/N");
+                answer = Console.ReadLine();
+            }
+            while (answer == "Y");
+            foreach(var name in names)
             {
                 Console.WriteLine(name);
             }
             Console.ReadLine();
-            char answer;
-            do
-            {
-                Console.WriteLine("Do you want enter another name?" +
-                    "Choose 'y' for yes or 'n' for no");
-                string input = Console.ReadLine();
-                answer = char.Parse(input);
-                if (answer != 'y')
-                {
-                    return;
-                }
-                Array.Resize(ref names, names.Length + 1);
-                names[names.Length - 1] = Console.ReadLine();
-                foreach(string name in names)
-                {
-                    Console.WriteLine(name);
-                }
-                Console.ReadLine();
-
-            }
-            while (answer == 'y');
           
         }
     }
